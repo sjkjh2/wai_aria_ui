@@ -1,0 +1,61 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------------------------------------------------
+	File : Common.css
+	Company : TWS
+	Author : TWS 2019-02-28
+	CSS 적용순서 : 아이디 > 태그와 클래스 > 클래스 > 태그
+	CSS 선택자 선언순서 : Type Selector, Layout Selector, Class Selector, Etc
+	CSS 속성 선언순서 : display, position, float/clear, overflow, width/height, margin/padding, border, background, font/color, align, etc
+-------------------------------------------------------------------------------------------------------------*/
+
+/* Font, font-weight: 400, 500, 700, 900 */
+*, *::before, *::after, html, body, .wrapper {font-family: 'Noto Sans KR', sans-serif; font-weight:400; letter-spacing:-1px; color:#333;}
+
+/* Common */
+h1 {font-size:2em; font-weight:700;}
+h2 {font-size:1.8em; font-weight:700;}
+h3 {font-size:1.5em; font-weight:700;}
+
+/* Baasic */
+.wrapper {width:100%; max-width:1000px; margin:0 auto; padding:50px 10px;}
+.contents {width:100%; margin-top:50px; padding:50px; background-color:#f3f3f3;}
+.heading-title {margin-bottom:20px; padding-left:10px;}
+.heading-sub {padding-left:10px; font-size:1.5em;}
+
+/* Accessibillity Hidden */
+.a11y {position:absolute; overflow:hidden; width:1px; height:1px; clip:rect(1px 1px 1px 1px); word-break:initial; word-wrap:initial;}
+
+/* Clear Fix */
+.clear::after {display:block; clear:both; content:"";}
+
+/*-------------------------------------------------------------------------------------------------------------
+	*필수 클래스명*
+-------------------------------------------------------------------------------------------------------------*/
+/* Tab UI */
+.tab {display:block; position:relative; margin:0; padding:0;}
+.tab-list {display:block; position:relative; margin:0; padding:0;}
+.tab-list button[role="tab"] {display:block; position:relative; z-index:100; float:left; margin:0; padding:0;}
+.tab-contents {display:block; position:relative; margin:0; padding:0;}
+.tab-contents .is-unvisual {display:none;}
+
+/*-------------------------------------------------------------------------------------------------------------
+	아래 클래스명은 수정해서 쓰면 됩니다.
+-------------------------------------------------------------------------------------------------------------*/
+/* Style */
+.style-list > button:not(:first-child) {margin:0 0 0 5px;}
+.style-list > button[role="tab"] {padding:5px 10px; background-color:#888; font-size:16px; color:#fff; transition:all 0.2s;}
+.style-contents > div[role="tabpanel"] {padding:20px; background-color:#fff;}
+
+/* state */
+.style-list > button.is-active {background-color:#fff; color:#333;}
+.style-list > button:hover, 
+.style-list > button:focus {background-color:#fff; color:#333;}
+.style-list > button:active {-webkit-box-shadow:0 0 0 6px #333;box-shadow:0 0 0 6px #333; border-radius:4px;}
+
+/* Test: 포커스 이동 확인용 링크와 버튼입니다. */
+.test-link {margin:20px 0;}
+.test-link a {display:block; padding:10px 20px; background-color:#aaa;}
+.test-content-link {margin:10px 0 0;}
+.test-content-link a {display:block; padding:5px 8px; background-color:#ddd;}
+.test-content-button {margin:10px 0 0;}
+.test-content-button button {display:block; padding:5px 8px; background-color:#ddd;}

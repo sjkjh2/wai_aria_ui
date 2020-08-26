@@ -1,0 +1,35 @@
+@charset "utf-8";
+/*-------------------------------------------------------------------------------------------------------------
+	File : Base.css
+	Company : TWS
+	Author : TWS 2019-02-28
+	CSS 적용순서 : 아이디 > 태그와 클래스 > 클래스 > 태그
+	CSS 선택자 선언순서 : Type Selector, Layout Selector, Class Selector, Etc
+	CSS 속성 선언순서 : display, position, float/clear, overflow, width/height, margin/padding, border, background, font/color, align, etc
+-------------------------------------------------------------------------------------------------------------*/
+
+*, *:before, *:after {margin:0; padding:0; border:0; font-family:"Noto Sans KR", "Open Sans","Dotum", "Dotumche", "돋움", "돋움체", "Arial"; box-sizing:inherit; -webkit-box-sizing:inherit; -moz-box-sizing:inherit; -o-box-sizing:inherit;}
+html {height:100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; -o-box-sizing:border-box;}
+body {height:100%; font-size:14px; line-height:1.3;}
+address, article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section {display:block; margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal;}
+img {vertical-align:middle;}
+ol, ul, li, dl, dt, dd {list-style:none;}
+table {width:100%; border-spacing:0px; border-collapse:collapse;}
+th, td {word-break:break-all; font-weight:normal;}
+fieldset, iframe {width:100%;}
+em, address {font-style:normal;}
+button, select, input, label {vertical-align:middle; font-family:"Noto Sans KR";}
+button[type="button"] {/* outline:none; cursor:pointer;*/}
+/* 
+	버튼의 커서: https://story.pxd.co.kr/1165
+	a, button, label 요소의 커서 모양: https://naradesign.github.io/article/cursor.html
+*/
+hr {display:none;}
+a {text-decoration:none; color:#333}
+a:hover, a:focus, a:visite {color:#333;}
+legend {position:absolute; left:-9999em; top:-9999em;}
+caption {visibility:hidden; height:0; line-height:0; font-size:0;}
+strong {font-weight:normal; font-family:"Noto Sans KR";}
+
+.overhidden {overflow:hidden;}

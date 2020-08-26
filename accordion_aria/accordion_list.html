@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 리스트 - 웹접근성 적용</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/accordion_list.css">
+    <script src="./js/libs/jquery-1.12.4.min.js"></script>
+    <script src="./js/libs/jquery-ui.min.js"></script>
+    <script src="./js/accordion_list.js"></script>
+</head>
+<!-- 
+    *참고 사이트*
+    레진 WAI-ARIA 가이드라인: https://github.com/lezhin/accessibility/blob/master/aria/README.md
+    AOA - 항공사 ARIA 적용사례: https://aoa.gitbook.io/skymimo/aoa-2018/undefined-3/undefined-6
+    월드와이드웹 WAI-ARIA 아코디언 예제: https://www.w3.org/TR/2018/NOTE-wai-aria-practices-1.1-20180726/examples/accordion/accordion.html
+    대한항공 게시판: https://www.koreanair.com/content/koreanair/korea/ko/customer-support.html#faqs
+ -->
+<body>
+    <div id="wrapper" class="wrapper">
+        <h1 class="heading-title">게시판 리스트</h1>
+        <p class="heading-sub">웹 접근성 적용</p>
+        <div class="contents">
+            <!-- Accordion -->
+            <div class="acd faq">
+                <h2 class="acd-title">FAQ</h2> <!-- KWCAG 2.1: [원칙 - 운용의 용이성], 지침 6.4.2. (제목 제공) 페이지, 프레임, 콘텐츠 블록에는 적절한 제목을 제공해야 한다. (만약 제목이 없는 디자인이라면 a11y 클래스명을 사용하여 숨김 처리 한다.) -->
+                <ul role="none" class="acd-list faq-list">
+                    <li class="unite" role="none">
+                        <div class="question">
+                            <button type="button" aria-controls="faq-01" aria-expanded="false" class="acd-subtitle question-button">
+                                <span class="question-text">
+                                    <span class="icon-q" aria-hidden="true"></span>
+                                    <span class="a11y">질문</span>
+                                    환불, 반품 진행을 하려면 어떻게 하나요?
+                                    <span class="icon-cross" aria-hidden="true"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div tabindex="-1" aria-hidden="true" id="faq-01" class="acd-content answer">
+                            <div class="answer-text">
+                                <span class="a11y">대답</span>
+                                외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다. 모든 국민의 재산권은 보장된다. 그 내용과 한계는 법률로 정한다. 모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="unite" role="none">
+                        <div class="question">
+                            <button type="button" aria-controls="faq-01" aria-expanded="false" class="acd-subtitle question-button">
+                                <span class="question-text">
+                                    <span class="icon-q" aria-hidden="true"></span>
+                                    <span class="a11y">질문</span>
+                                    환불, 반품 진행을 하려면 어떻게 하나요?
+                                    <span class="icon-cross" aria-hidden="true"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div tabindex="-1" aria-hidden="true" id="faq-01" class="acd-content answer">
+                            <div class="answer-text">
+                                <span class="a11y">대답</span>
+                                외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다. 모든 국민의 재산권은 보장된다. 그 내용과 한계는 법률로 정한다. 모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="unite" role="none">
+                        <div class="question">
+                            <button type="button" aria-controls="faq-01" aria-expanded="false" class="acd-subtitle question-button">
+                                <span class="question-text">
+                                    <span class="icon-q" aria-hidden="true"></span>
+                                    <span class="a11y">질문</span>
+                                    환불, 반품 진행을 하려면 어떻게 하나요?
+                                    <span class="icon-cross" aria-hidden="true"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div tabindex="-1" aria-hidden="true" id="faq-01" class="acd-content answer">
+                            <div class="answer-text">
+                                <span class="a11y">대답</span>
+                                외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다. 모든 국민의 재산권은 보장된다. 그 내용과 한계는 법률로 정한다. 모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="unite" role="none">
+                        <div class="question">
+                            <button type="button" aria-controls="faq-01" aria-expanded="false" class="acd-subtitle question-button">
+                                <span class="question-text">
+                                    <span class="icon-q" aria-hidden="true"></span>
+                                    <span class="a11y">질문</span>
+                                    환불, 반품 진행을 하려면 어떻게 하나요?
+                                    <span class="icon-cross" aria-hidden="true"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div tabindex="-1" aria-hidden="true" id="faq-01" class="acd-content answer">
+                            <div class="answer-text">
+                                <span class="a11y">대답</span>
+                                외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다. 모든 국민의 재산권은 보장된다. 그 내용과 한계는 법률로 정한다. 모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="unite" role="none">
+                        <div class="question">
+                            <button type="button" aria-controls="faq-01" aria-expanded="false" class="acd-subtitle question-button">
+                                <span class="question-text">
+                                    <span class="icon-q" aria-hidden="true"></span>
+                                    <span class="a11y">질문</span>
+                                    환불, 반품 진행을 하려면 어떻게 하나요?
+                                    <span class="icon-cross" aria-hidden="true"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div tabindex="-1" aria-hidden="true" id="faq-01" class="acd-content answer">
+                            <div class="answer-text">
+                                <span class="a11y">대답</span>
+                                외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 통신·방송의 시설기준과 신문의 기능을 보장하기 위하여 필요한 사항은 법률로 정한다. 모든 국민의 재산권은 보장된다. 그 내용과 한계는 법률로 정한다. 모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //Accordion -->
+        </div>
+    </div>
+</body>
+</html>
